@@ -16,11 +16,26 @@ class calc
     //Math solver functions
     bool mathSolver(string math, float &ans);
     void mathOp(string &math, string symbol, const function<float(float, float)> &f);
+    void mathFunc(string &math, string symbol, const function<float(float)> &f);
+
     static float solveExponent(float leftVal, float rightVal);
     static float solveMultiplication(float leftVal, float rightVal);
     static float solveDivision(float leftVal, float rightVal);
     static float solveAddition(float leftVal, float rightVal);
     static float solveSubtraction(float leftVal, float rightVal);
+
+    static float solveSinDegrees(float f);
+    static float solveSinRadians(float f);
+    static float solveAsinDegrees(float f);
+    static float solveAsinRadians(float f);
+    static float solveCosDegrees(float f);
+    static float solveCosRadians(float f);
+    static float solveAcosDegrees(float f);
+    static float solveAcosRadians(float f);
+    static float solveTanDegrees(float f);
+    static float solveTanRadians(float f);
+    static float solveAtanDegrees(float f);
+    static float solveAtanRadians(float f);
 
 
     //Helper Functions
@@ -35,7 +50,8 @@ class calc
 
     public:
         calc();
-        bool run();
+        bool runShell();
+        bool runFile(string fileName);
 };
 
 #endif
